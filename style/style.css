@@ -1,161 +1,112 @@
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 :root{
-    --main-color: green;
-    --black: black;
-    --bg: black;
-    --border: .1rem solid rgba (255,255,255,.3); 
+  --verde: #133c2a 0;
+  --cinza: #333;
+  --preto: rgb(0, 0, 0);
+  --branco: white;
 }
-
-
 *{
-    margin: 0; padding: 0;
+    margin:0;
+    padding: 0;
     box-sizing: border-box;
-    outline: none; border: none;
-    text-decoration: none;
-    text-transform: capitalize;
-    transition: .2s linear;
-    font-family: 'Press Start 2P', cursive;
 }
-html{
-    font-size:65.5%;
-    overflow-x: hidden;
-    scroll-padding-top: 9rem;
-    scroll-behavior: smooth;
-}
-html::-webkit-scrollbar{
-    width: .8rem;
-}
-html::-webkit-scrollbar-track{
-    background: transparent;
-}
-html::-webkit-scrollbar-thumb{
-    border-radius: 5rem;
-    background: white;
-}
-
 body{
-    background: rgb(0, 50, 0);
+    font-size: 20px;
+    background: #133c2a;
+    font-family: 'Press Start 2P', cursive;
+    color: rgb(255, 255, 255)
 }
-.btn{
-    margin-top: 1rem;
-    display: inline-block;
-    padding: 9rem 3rem;
-    font-size: 1.7rem;
-    color: white;
-    background: var(--main-color);
-    cursor: pointer;
-}
-.header{
-    background: rgb(0, 50, 0);
+header .container{
+    margin:55px;
     display: flex;
+    flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    padding: 1.0rem 5%;
-    border-bottom: var(--border);
-    position: fixed;
-    top: 0; left: 0; right: 0;
-    z-index: 1000 ;
-}
+    margin-bottom: 55px;
 
-.headerh2{
-    margin-right: 45rem;
+}
+header .logo{
+    margin-left: 1px;
+    color: white;
     font-family: 'Press Start 2P', cursive;
-    font-size: 1rem;
-    color: white;
+    font-size: 1px;
 }
-.header .logo img {
-
-    margin: 1rem;
-    height: 3rem;
+header nav a{
+    text-decoration: none;
+    color: rgb(253, 253, 253);
+    margin-right: 10px;
 }
-.header .navbar a {
-    margin: 1.5rem;
-    font-size: 1.5rem;
-    color: white;
-    
+header nav a:hover{
+    color: rgb(3, 190, 3);
 }
-.header .navbar a:hover{
-    color: var(--main-color);
-    border-bottom: .1rem solid var(--main-color);
-    padding-bottom: .5rem;
-}
-.header .icons div {
-    color:white;
-    cursor: pointer;
-    font-size: 2.5rem;
-    margin-left: 2rem;
-}
-.header .icons div:hover{
-    color: var(--main-color)
-}
-#menu-btn{
-    display: none;
-}
-.header .search-form{
-    position: absolute;
-    top: 115%; right: 7%;
-    background: white;
-    width: 50rem;
-    height: 5rem;
+.games-principal{
+    margin-bottom: 5px;
+    font-size: 1px;
+    height: -100px;
+    background-size: cover;
     display: flex;
-    align-items: center;
-    transform: scaley(0);
-    transform-origin: top;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
 }
-.header .search-form input {
-    height: 100%;
-    width: 100%;
-    font-size: 1.5rem;
-    color: var(--black);
-    padding: 1rem;
-    text-transform: none;
-}
-.header .search-form label{
-    cursor: poiter;
-    font-size: 2.2rem;
-    margin-right: 1.5rem;
-    color: var(--black);
-}
-.header .search-form label:hover{
-    color: var(--main-color);
+.games-principal .descricao{
+    margin-top: 10px;
+    margin-bottom: 50px;
 }
 
-
-/* media queries*/
-@media (max-width:911px){
-    html{
-        font-size: 65.5%;
-    }
-    .header{
-        padding: 1.5rem 2rem;
-    }
+.titulo{
+    margin-top: 60%;
+    font-size: 15px;
+    font-family: 'Press Start 2P', cursive;
 }
-@media (max-width:911px){
-    #menu-btn{
-        display: inline-block;
+.imput{
+    background-color: rgba(0, 0, 0, .50);
+    border: none;
+    color: white;
+    padding: 5px 25px;
+    margin-top: 10px;
+    margin-right: 100px;
+    font-size: 20px;
+    font-family: 'Press Start 2P', cursive;
+    cursor: pointer;
+    transition: 1s ease all;
 }
-.header .navbar{
-    position: absolute;
-    top: 100%; right: -100;
-    background: white;
-    background: 30rem;
-    height: calc(100vh - 9.5rem);
+.botao{
+    background-color: rgba(0, 0, 0, .50);
+    border: none;
+    color: white;
+    padding: 5px 25px;
+    margin-top: 10px;
+    margin-right: 100px;
+    font-size: 20px;
+    font-family: 'Press Start 2P', cursive;
+    cursor: pointer;
+    transition: 1s ease all;
 }
-.header .navbar a{
-    color: var(--black);
-    display: block;
-    margin: 1.5rem;
-    padding: .5rem;
-    font-size: 2rem;
-    }
-
+.botao:hover{
+    background-color: var(--branco);
+    color: rgb(0, 0, 0);
+}
+.botao i{
+    margin-right: 5px;
 }
 
+.container{
+    margin-left: 20px;
+}
+.games-principal .container{
+    width: 70%;
+}
+.box-game{
+    height: 10%;
+    width: 10%;
+    display: inline;
+}
 
-
-
-
-
-
-
-
+.carrosel-games{
+    display: flex;
+    white-space: nowrap;
+    overflow-y: auto;
+    scrollbar-width: none;
+    padding-left: calc(env(safe-area-inset-left,0px) + 16px);
+}
